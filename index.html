@@ -6,22 +6,29 @@
   <title>Web Saya</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <script src="script.js"></script>
 <body>
   <header>
     <h1>Selamat Datang di Web Saya</h1>
     <p>Membuat tampilan web menarik dari GitHub</p>
   </header>
-<button id="btnSimpanPDF" class="pdf-button">
-  💾 Simpan ke PDF
-</button>
+
+  <!-- Tombol 1 -->
+  <button id="btnSimpanPDF1" class="pdf-button">
+    💾 Simpan Laporan
+  </button>
+
+  <!-- Tombol 2 -->
+  <button id="btnSimpanPDF2" class="pdf-button">
+    📄 Simpan Ringkasan
+  </button>
+
   <main>
     <section class="hero">
       <h2>Ini bagian utama</h2>
       <p>Kamu bisa menaruh informasi penting di sini.</p>
     </section>
 
-    <section class="konten">
+    <section class="konten" id="isi-laporan">
       <h3>Fitur Web</h3>
       <ul>
         <li>Desain responsif</li>
@@ -29,30 +36,31 @@
         <li>Gratis lewat GitHub Pages</li>
       </ul>
     </section>
+
+    <section class="konten" id="isi-ringkasan">
+      <h3>Ringkasan Singkat</h3>
+      <p>Ini adalah ringkasan dari fitur web sederhana ini.</p>
+    </section>
   </main>
 
   <footer>
     <p>© 2025 Web oleh Hartanto</p>
   </footer>
+
+  <!-- Library html2pdf -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-<script>
-  document.getElementById("btnSimpanPDF").addEventListener("click", function () {
-    const elemenCetak = document.getElementById("isi-laporan") || document.body;
 
-    const opsi = {
-      margin: 0.5,
-      filename: 'laporan-avsec.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-    };
+  <!-- Script tombol -->
+  <script>
+    document.getElementById("btnSimpanPDF1").addEventListener("click", function () {
+      const elemen1 = document.getElementById("isi-laporan");
+      html2pdf().from(elemen1).save("laporan-avsec.pdf");
+    });
 
-    html2pdf().set(opsi).from(elemenCetak).save();
-  });
-</script>
-<button id="btnSimpanPDF" class="pdf-button">
-  💾 Simpan ke PDF
-</button>
-
+    document.getElementById("btnSimpanPDF2").addEventListener("click", function () {
+      const elemen2 = document.getElementById("isi-ringkasan");
+      html2pdf().from(elemen2).save("ringkasan-avsec.pdf");
+    });
+  </script>
 </body>
 </html>
