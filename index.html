@@ -5,6 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Saya</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .pdf-button {
+      background-color: #00897b;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px 5px;
+    }
+
+    .pdf-button:hover {
+      background-color: #00695c;
+    }
+
+    .checklist {
+      padding: 1em;
+    }
+
+    .checklist label {
+      display: block;
+      margin-bottom: 0.5em;
+      font-size: 16px;
+    }
+
+    .checklist input[type="checkbox"] {
+      margin-right: 8px;
+      transform: scale(1.2);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -30,11 +61,11 @@
 
     <section class="konten" id="isi-laporan">
       <h3>Fitur Web</h3>
-      <ul>
-        <li>Desain responsif</li>
-        <li>Mudah diakses</li>
-        <li>Gratis lewat GitHub Pages</li>
-      </ul>
+      <form class="checklist">
+        <label><input type="checkbox" checked> Desain responsif</label>
+        <label><input type="checkbox"> Mudah diakses</label>
+        <label><input type="checkbox"> Gratis lewat GitHub Pages</label>
+      </form>
     </section>
 
     <section class="konten" id="isi-ringkasan">
