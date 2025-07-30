@@ -1,4 +1,4 @@
-function simpanLaporan() {
-  const isi = document.querySelector("textarea").value;
-  alert("Laporan disimpan:\n" + isi);
-}
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  alert("Selamat datang di web saya!");
+});
