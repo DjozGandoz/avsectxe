@@ -6,8 +6,21 @@
   <title>Web Saya</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      background-color: #000; /* latar belakang hitam */
+      color: #fff; /* teks putih */
+      font-family: sans-serif;
+    }
+
+    header {
+      background-color: #1565c0; /* biru tua */
+      color: white;
+      text-align: center;
+      padding: 2em;
+    }
+
     .pdf-button {
-      background-color: #00897b;
+      background-color: #1565c0;
       color: white;
       padding: 12px 20px;
       border: none;
@@ -18,7 +31,7 @@
     }
 
     .pdf-button:hover {
-      background-color: #00695c;
+      background-color: #0d47a1; /* biru lebih gelap saat hover */
     }
 
     .checklist {
@@ -35,6 +48,20 @@
       margin-right: 8px;
       transform: scale(1.2);
     }
+
+    section.konten {
+      background-color: #111;
+      padding: 1.5em;
+      border-radius: 12px;
+      margin: 1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 14px;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -43,9 +70,12 @@
     <p>Membuat tampilan web menarik dari GitHub</p>
   </header>
 
+  <!-- Tombol 1 -->
   <button id="btnSimpanPDF1" class="pdf-button">
     💾 Simpan Laporan
   </button>
+
+  <!-- Tombol 2 -->
   <button id="btnSimpanPDF2" class="pdf-button">
     📄 Simpan Ringkasan
   </button>
@@ -75,8 +105,10 @@
     <p>© 2025 Web oleh Hartanto</p>
   </footer>
 
-  <!-- Script PDF -->
+  <!-- Library html2pdf -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <!-- Script tombol -->
   <script>
     document.getElementById("btnSimpanPDF1").addEventListener("click", function () {
       const elemen1 = document.getElementById("isi-laporan");
