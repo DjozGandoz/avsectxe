@@ -1,4 +1,4 @@
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
-  alert("Selamat datang di web saya!");
+  alert("Selamat datang Everybody!");
 });
