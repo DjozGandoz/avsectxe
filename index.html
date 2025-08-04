@@ -1,72 +1,91 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aviation Security Bandara Rembele</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AVSEC Bandara Rembele</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      background-color: #111;
-      color: white;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0c0c0c;
+      color: #ffffff;
     }
 
     header {
-      padding: 20px;
-      background-color: #000;
+      background-color: #1a1a1a;
+      padding: 30px 20px;
       text-align: center;
+      border-bottom: 2px solid #333;
     }
 
     header h1 {
-      font-size: 22px;
-      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 5px;
     }
 
-    .content {
-      background-color: #b5a9a9;
-      color: white;
-      padding: 20px;
-      border-radius: 20px;
+    header p {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .intro {
+      background-color: #3d3d3d;
       margin: 20px;
+      padding: 20px;
+      border-radius: 16px;
     }
 
-    .content h2 {
+    .intro h2 {
       font-size: 20px;
       margin-bottom: 10px;
     }
 
-    .menu-grid {
+    .intro p {
+      font-size: 15px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .menu {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 15px;
       margin: 20px;
     }
 
-    .menu-button {
-      padding: 20px;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 10px;
-      color: white;
+    .menu a {
       text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    .menu a:hover {
+      transform: scale(1.05);
     }
 
     .green { background-color: #28a745; }
     .red { background-color: #dc3545; }
     .yellow { background-color: #ffc107; color: black; }
-    .dark { background-color: #343a40; }
-    .blue { background-color: #003366; }
+    .blue-dark { background-color: #003366; }
+    .gray { background-color: #495057; }
 
     footer {
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       font-size: 12px;
-      color: #aaa;
+      color: #999;
     }
   </style>
 </head>
@@ -74,30 +93,26 @@
 
   <header>
     <h1>🛫 Aviation Security<br>Bandara Rembele</h1>
-    <p style="font-size: 14px; margin-top: 5px;">📅 5 Agustus 2025</p>
+    <p>📅 5 Agustus 2025</p>
   </header>
 
-  <div class="content">
-    <h2>Selamat Datang di Website Resmi Aviation Security Bandara Rembele</h2>
-    <p>
-      Situs ini kami hadirkan untuk menyampaikan info terbaru, layanan, serta kegiatan operasional dan pengawasan oleh tim Aviation Security.
-    </p>
-    <p>
-      Silakan pilih menu di bawah untuk mengakses fitur yang tersedia. Kami berkomitmen memberikan layanan terbaik demi mendukung keselamatan dan kenyamanan penerbangan.
-    </p>
+  <section class="intro">
+    <h2>Selamat Datang</h2>
+    <p>Situs ini kami hadirkan untuk menyampaikan info terbaru, layanan, serta kegiatan operasional dan pengawasan oleh tim Aviation Security.</p>
+    <p>Silakan pilih menu di bawah untuk mengakses fitur yang tersedia. Kami berkomitmen memberikan layanan terbaik demi mendukung keselamatan dan kenyamanan penerbangan.</p>
     <p><i>Salam hormat,</i><br><strong>Manajemen Bandara Rembele</strong></p>
-  </div>
+  </section>
 
-  <div class="menu-grid">
-    <a href="#" class="menu-button green">📊 Anggota Avsec</a>
-    <a href="#" class="menu-button red">📄 Piket</a>
-    <a href="#" class="menu-button yellow">📁 Patroli</a>
-    <a href="#" class="menu-button dark">⬇️ Laporan SCP</a>
-    <a href="#" class="menu-button blue">⬇️ SOP</a>
-  </div>
+  <section class="menu">
+    <a href="#" class="green">📊 Anggota AVSEC</a>
+    <a href="#" class="red">📄 Piket</a>
+    <a href="#" class="yellow">📁 Patroli</a>
+    <a href="#" class="gray">⬇️ SCP</a>
+    <a href="#" class="blue-dark">⬇️ SOP</a>
+  </section>
 
   <footer>
-    © 2025 avsec-txe.web.app
+    © 2025 avsec-txe.web.app | Aviation Security Bandara Rembele
   </footer>
 
 </body>
